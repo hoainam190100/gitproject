@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=0;
+    function fibonaci(number) {
+        sum=0;
+        if (number>=1) {
+            let st1 = 0;
+            let st2 = 1;
+            sum +=st2;
+            document.write(st2 + '  ');
+            for (let i = 1; i <number; i++) {
+                let st3 = st1 + st2;
+                sum +=st3;
+                document.write(st3 + ' ');
+                st1 = st2;
+                st2 = st3;
+            }
+            document.write('tong:'+sum);
+        }
+    }
+   function inputNumber() {
+       do {
+           number = prompt('input number  (>=1):');
+       } while (number < 1);
+   }
+   function main() {
+       inputNumber();
+       fibonaci(number);
+   }
+   main()
+</script>
+
+</body>
+</html>
